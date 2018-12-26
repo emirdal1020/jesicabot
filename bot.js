@@ -184,61 +184,6 @@ exports.help = {
   usage: 'sigara'
 };
 
-////////////////////////
-
-client.on("guildMemberAdd", member => {
-	
-	var channel = member.guild.channels.find("name", "giriş-çıkış");
-	if (!channel) return;
-	
-	var role = member.guild.roles.find("name", "💦Üyemiz💦");
-	if (!role) return;
-	
-	member.addRole(role); 
-	
-	channel.send(member + " https://media.giphy.com/media/1X5ZXNgZSMOvMoqeTm/giphy.gif Hosgeldin Guzel Kardesim.");
-	
-	member.send("Aramıza hoş geldin! Artik Sende Bizden Biri Oldun!")
-	
-});
-
-////////////////////////
-
-client.on('message', msg => {
-  if (msg.content === 'discord.gg') {
-   msg.delete(30)
-    msg.reply(':warning:Hoopp Niye Reklam Yapıyon Kardeş:warning:');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'discord') {
-   msg.delete(30)
-    msg.reply(':warning:Hoopp Niye Reklam Yapıyon Kardeş:warning:');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'https') {
-   msg.delete(30)
-    msg.reply(':warning:Hoopp Niye Reklam Yapıyon Kardeş:warning:');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'http') {
-   msg.delete(30)
-    msg.reply(':warning:Hoopp Niye Reklam Yapıyon Kardeş:warning:');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'discordg') {
-   msg.delete(30)
-    msg.reply(':warning:Hoopp Niye Reklam Yapıyon Kardeş:warning:');
-  }
-});
-
 client.elevation = message => {
   if(!message.guild) {
 	return; }
